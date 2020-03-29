@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Main Page</title>
+  
+  <link rel="stylesheet" type="text/css" href="../css/base.css">
+  <link rel="stylesheet" type="text/css" href="../css/jquery-ui.css">
+
+  <script src="../javascript/cell.js"></script>
+  <script src="../javascript/jquery.js"></script>
+  <script src="../javascript/lodash.js"></script>
+  <script src="../javascript/jquery-ui.js"></script>
+</head>
+
+<body>
+  <header>
+    <span><a href="./index.html">Biology</a></span>
+    <div>
+      <span><a href="./diversity.html">Diversity</a></span>
+    </div>
+  </header>
+  <div class="container">
+    <img src="../img/cell.jpg">
+    <div id="description">
+      <h4 id="description-title">Description</h4>
+      <div id="description-content">
+        Please use the search box below to display the description here
+      </div>
+    </div>
+    <div class="ui-widget" id="search-container">
+      <label for="search">Search keyword: </label>
+      <input placeholder="e.g. 'Peroxisome'" id="search">
+    </div>
+  </div>
+  <footer>
+    &copy; Celine 2020
+  </footer>
+</body>
+<script>
+  var availableKeyword = _.keys(cellInformation);
+  $("#search").autocomplete({
+    source: availableKeyword,
+    select: function(e, ui) {
+      console.log(ui.item.value);
+      $("#description-title").html(ui.item.value);
+      $("#description-content").html(cellInformation[ui.item.value]);
+    }
+  });
+</script>
+</html>
