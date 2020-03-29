@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Diversity</title>
+  
+  <link rel="stylesheet" type="text/css" href="../css/lightslider.css">
+  <link rel="stylesheet" type="text/css" href="../css/jquery-ui.css">
+  <link rel="stylesheet" type="text/css" href="../css/base.css">
+
+  <script src="../javascript/cell.js"></script>
+  <script src="../javascript/jquery.js"></script>
+  <script src="../javascript/lodash.js"></script>
+  <script src="../javascript/lightslider.js"></script>
+  <script src="../javascript/jquery-ui.js"></script>
+</head>
+
+<body>
+  <header>
+    <span><a href="./index.html">Biology</a></span>
+    <div>
+      <span><a href="./index.html">Cell Structure</a></span> |
+      <span><a href="./diversity.html">Diversity</a></span>
+    </div>
+  </header>
+  <div class="container" style="padding: 10px 30%">
+    <div id="description" style="width: auto";>
+      <h4>Five Kingdom Classification</h4>
+      Very early on, scientists began grouping the living organisms under different categories. Some biologists classified organisms into plants and animals. Ernst Haeckel, Robert Whittaker, and Carl Woese are some biologists who attempted a broader system of classification. Amongst these, the Five Kingdom Classification proposed by Robert Whittaker stood out and is widely used.
+      <br>
+Whitaker proposed that organisms should be broadly divided into kingdoms, based on certain characters like the structure of the cell, mode of nutrition, the source of nutrition, interrelationship, body organization, and reproduction. According to this system, there are five main kingdoms.
+    </div>
+    <ul id="lightSlider">
+      <li>    
+        <img src="../img/diversity.png" height="600px">
+      </li>
+      <li>
+        <img src="../img/kingdom_classification.png">
+      </li>
+      <li>
+        <h3>Kingdom Monera</h3>
+        <p>These organisms are prokaryotic and unicellular. They do not have a well-defined nucleus and also lack cell organelles.  Some organisms show the presence of cell wall while there are others without a cell wall. Consequently, some organisms are autotrophic and others are heterotrophic. Examples include Bacteria, Cyanobacteria, and Mycoplasma.</p>
+      </li>
+      <li>
+        <h3>Kingdom Protista
+</h3>
+        <p>Organisms grouped under Kingdom Protista are all unicellular, but eukaryotic organisms. These are the simplest forms of eukaryotes that exhibit either autotrophic or heterotrophic mode of nutrition. Some organisms have appendages such as cilia or flagella or pseudopodia to move around. Some examples are Diatoms, Protozoans like Amoeba, Paramoecium.</p>
+      </li>
+      <li>
+        <h3>Kingdom Fungi
+</h3>
+        <p>Heterotrophic, Multicellular and Eukaryotic organisms are grouped under Kingdom Fungi. Their mode of nutrition is saprophytic as they use decaying organic matter as food. They have cell walls, which are made up of a substance called Chitin. Fungi also form a symbiotic association with some blue-green algae. Yeast, Mushroom, Aspergillus are examples of Fungi.</p>
+      </li>
+      <li>
+         <h3>Kingdom Plantae</h3>
+         <p>
+           These are Eukaryotic, Multicellular organisms with a cell wall that is made up of cellulose. They are autotrophs and synthesize their own food through the process of photosynthesis. This kingdom includes all plants.
+           <br>
+           Based on the body differentiation and presence or absence of specialized vascular tissue, Kingdom Plantae is divided into different divisions, namely Thallophyta, Bryophyta, Pteridophyta, Gymnosperms, and Angiosperms. Examples are Spirogyra, Ferns, Pines, and Mango Plant etc.</p>
+      </li>
+      <li>
+         <h3>Kingdom Animalia</h3>
+         <p>
+           This Kingdom includes organisms that are Multicellular, Eukaryotic, without the presence of cell wall. They have a heterotrophic mode of nutrition. They also exhibit great diversity. Some organisms are simple while others have a complex body with specialized tissue differentiation and body organs.
+           <br>
+           The Animal Kingdom is divided into many phyla and classes. Some of the phyla are Porifera, Coelenterata, Arthropoda, Echinodermata, Chordata etc. Examples – Hydra, Starfish, Earthworms, Monkeys, Birds etc.
+         </p>
+      </li>
+      <li style="display: none">
+      </li>
+    </ul>
+  </div>
+  <footer>
+    &copy; Celine 2020
+  </footer>
+</body>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $("#lightSlider").lightSlider({
+      adaptiveHeight:true,
+      item:1,
+      controls: true,
+      pager: true,
+      onSliderLoad: function () {
+        $(".lSPager li:last-child").css("display", "none");
+      }
+    });
+  });
+</script>
+</html>
